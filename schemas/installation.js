@@ -8,22 +8,31 @@ export const Installation = {
         {
             name: 'name',
             type: 'string',
-            title: 'Venue Name'
-        },
-        {
-            name: 'website',
-            type: 'url',
-            title: 'Venue Website'
-        },
-        {
-            name: 'location',
-            type: 'string',
-            title: 'Location'
+            title: 'Name'
         },
         {
             name: 'banner',
             type: 'image',
             title: 'Cover Image'
+        },
+        {
+            name: 'date_start',
+            type: 'date',
+            title: 'Start Date',
+        },
+        {
+            name: 'date_end',
+            type: 'date',
+            title: 'End Date'
+        },
+        {
+            name: 'venue',
+            type: 'reference',
+            title: 'Venue',
+            to: [{type: 'venue'}],
+            options: {
+                disableNew: true
+            }
         },
         {
             name: 'brief',
@@ -36,20 +45,13 @@ export const Installation = {
             title: 'Artists',
             of: [
                 {
-                    type: 'object',
-                    name: 'collaborator',
-                    title: 'Collaborator',
-                    components: {
-                        preview: PreviewReferenceImg,
-                    }, 
-                    fields: [
-                        {
-                            name: 'artist',
-                            type: 'reference',
-                            title: 'Artist',
-                            to: [{type: 'artist'}]
-                        },
-                    ],
+                    name: 'artist',
+                    type: 'reference',
+                    title: 'Artist',
+                    to: [{type: 'artist'}],
+                    options: {
+                        disableNew: true
+                    }
                 },
             ],
         },

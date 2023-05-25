@@ -2,6 +2,12 @@ export const Series = {
     name: 'series',
     type: 'document',
     title: 'Series',
+    groups: [
+        {
+            name: 'artworks',
+            title: 'Artworks',
+        },
+    ],
     fields: [
         {
             name: 'name',
@@ -21,8 +27,41 @@ export const Series = {
         },
         {
             name: 'brief',
-            type: 'text',
-            title: 'Brief'
+            type: 'array',
+            title: 'Brief',
+            of: [{type: 'block'}]
         },
+        /*
+        {
+            title: 'Artworks',
+            name: 'atrworksReference',
+            type: 'crossDatasetReference',
+            dataset: 'production',
+            group:'artworks',
+            to: [
+                {
+                    type: 'artwork',
+                    preview: {
+                        select: {
+                            title: 'name',
+                            media: 'image',
+                        },
+                    },
+                },
+            ],
+            options: {
+                filter: ({document}) => {
+                // Always make sure to check for document properties
+                // before attempting to use them/
+                    return {
+                        filter: 'series == $ref',
+                        params: {
+                            series: document.ref,
+                        }
+                    }
+                }
+            }
+        }
+        */
     ]
 }
