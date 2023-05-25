@@ -15,12 +15,15 @@
     "sanity"
   ],
   "dependencies": {
+    "@sanity/dashboard": "^3.1.4",
     "@sanity/vision": "^3.11.3",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
     "sanity": "^3.11.3",
+    "sanity-plugin-dashboard-widget-document-list": "^1.0.1",
+    "sanity-plugin-media": "^2.0.5",
     "styled-components": "^5.3.9"
   },
   "devDependencies": {

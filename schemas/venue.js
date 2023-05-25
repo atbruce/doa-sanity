@@ -1,20 +1,20 @@
 import { US_STATES } from '../library/index'
 import { InputInstagram } from '../components/inputs/InputInstagram'
 
-export const Artist = {
-    name: 'artist',
+export const Venue = {
+    name: 'venue',
     type: 'document',
-    title: 'Artists',
+    title: 'Venues',
     fields: [
         {
             name: 'name',
-            type: 'string',
+            type: 'url',
             title: 'Name'
         },
         {
-            name: 'avatar',
+            name: 'banner',
             type: 'image',
-            title: 'Profile Image'
+            title: 'Cover Image'
         },
         {
             name: 'instagram',
@@ -26,6 +26,16 @@ export const Artist = {
             name: 'website',
             type: 'url',
             title: 'Website'
+        },
+        {
+            name: 'address1',
+            type: 'string',
+            title: 'Street Address'
+        },
+        {
+            name: 'address2',
+            type: 'string',
+            title: 'Street Address (cont.)'
         },
         {
             name: 'city',
@@ -41,15 +51,9 @@ export const Artist = {
             }
         },
         {
-            name: 'bio',
-            type: 'array',
-            title: 'Bio',
-            of: [{type: 'block'}]
-        },
-        {
-            name: 'signature',
-            type: 'image',
-            title: 'Signature'
-        },
+            name: 'zip',
+            type: 'string',
+            title: 'Zip'
+        }
     ]
 }
