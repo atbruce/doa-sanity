@@ -5,7 +5,7 @@
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "sanity dev",
+    "dev": "sanity dev --open",
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "@sanity/vision": "^3.11.3",
+    "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
