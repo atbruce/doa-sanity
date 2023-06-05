@@ -2,6 +2,13 @@ export const Series = {
     name: 'series',
     type: 'document',
     title: 'Series',
+    preview: {
+        select: {
+            media: 'banner',
+            title: 'name',
+            subtitle: 'artist.name'
+        }
+    },
     groups: [
         {
             name: 'artworks',

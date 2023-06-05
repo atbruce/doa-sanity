@@ -1,7 +1,16 @@
+import { InputDimensions } from '../components/inputs/InputDimensions'
+
 export const Artwork = {
     name: 'artwork',
     type: 'document',
     title: 'Artworks',
+    preview: {
+        select: {
+            media: 'banner',
+            title: 'name',
+            subtitle: 'artist.name'
+        }
+    },
     fields: [
         {
             name: 'name',
@@ -32,6 +41,24 @@ export const Artwork = {
             type: 'reference',
             title: 'Series',
             to: [{type: 'series'}]
+        },
+        {
+            name: 'width',
+            type: 'number',
+            title: 'Width',
+            components: {input: InputDimensions},
+        },
+        {
+            name: 'height',
+            type: 'number',
+            title: 'Height',
+            components: {input: InputDimensions},
+        },
+        {
+            name: 'depth',
+            type: 'number',
+            title: 'Depth',
+            components: {input: InputDimensions},
         },
         {
             name: 'brief',

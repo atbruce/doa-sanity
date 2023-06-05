@@ -41,14 +41,14 @@ export const Installation = {
         },
         {
             type: 'array',
-            name: 'artists',
-            title: 'Artists',
+            name: 'artworks',
+            title: 'Artworks',
             of: [
                 {
-                    name: 'artist',
+                    name: 'artwork',
                     type: 'reference',
-                    title: 'Artist',
-                    to: [{type: 'artist'}],
+                    title: 'Artwork',
+                    to: [{type: 'artwork'}],
                     options: {
                         disableNew: true
                     }

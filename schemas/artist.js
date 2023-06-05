@@ -5,6 +5,13 @@ export const Artist = {
     name: 'artist',
     type: 'document',
     title: 'Artists',
+    preview: {
+        select: {
+            media: 'avatar',
+            title: 'name',
+            subtitle: 'city'
+        }
+    },
     fields: [
         {
             name: 'name',
