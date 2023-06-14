@@ -8,7 +8,7 @@ export const Venue = {
     fields: [
         {
             name: 'name',
-            type: 'url',
+            type: 'string',
             title: 'Name'
         },
         {
