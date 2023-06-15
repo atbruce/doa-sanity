@@ -36,8 +36,9 @@ export const Installation = {
         },
         {
             name: 'brief',
-            type: 'text',
-            title: 'Brief'
+            type: 'array',
+            title: 'Brief',
+            of: [{type: 'block'}]
         },
         {
             type: 'array',
